@@ -1,0 +1,128 @@
+nav {
+    background-color: #33ff55;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-link {
+    color: #003366;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #003366;
+    text-decoration: none;
+    color: #003366;
+}
+
+.dropdown-menu {
+    background-color: #c2fdcc;
+}
+
+.dropdown-item {
+    color: #003366;
+    font-size: 15px;
+}
+
+.dropdown-item:hover {
+    background-color: #afffbc;
+    text-align: none;
+    color: #003366;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.container h3 {
+    color: #003366;
+    border-bottom: 5px solid #33ff55;
+    width: 50%;
+    text-transform: uppercase;
+    font-size: 25px;
+    padding-top: 100px;
+}
+
+.container p {
+    color: #003366;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    padding-top: 10px;
+    font-weight: lighter;
+}
+
+.carousel-inner .card {
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.card-deck {
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.card-header {
+    background-color: #afffbc;
+    text-transform: uppercase;
+    color: #003366;
+    outline-style: none;
+    width: 100%;
+    overflow-inline: 10px;
+}
+
+.img {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.fade {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.btn {
+    color: #003366;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bolder;
+    top: 50%;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn:hover {
+    outline: none;
+    box-shadow: none;
+    color: #003366;
+    border-bottom: 3px solid #003366;
+}
+
+.card:hover .img {
+    opacity: .3;
+}
+
+.card:hover .fade {
+    opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: #33ff55;
+}

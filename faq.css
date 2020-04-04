@@ -1,0 +1,290 @@
+nav {
+    background-color: #33ff55;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-link {
+    color: #003366;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #003366;
+    text-decoration: none;
+    color: #003366;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.dropdown-menu {
+    background-color: #c2fdcc;
+}
+
+.dropdown-item {
+    color: #003366;
+    font-size: 15px;
+}
+
+.dropdown-item:hover {
+    background-color: #afffbc;
+    text-align: none;
+    color: #003366;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.overlay .card {
+    background-color: #003366;
+    height: 250px;
+}
+
+.card-header {
+    color: #33ff55;
+    text-align: center;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.overlay .form-control {
+    border: none;
+    border-bottom: 1px solid #33ff55;
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 0;
+    color: grey;
+    background-color: #003366;
+}
+
+.overlay .form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.overlay .btn {
+    outline: none;
+    box-shadow: none;
+    background-color: #33ff55;
+    color: #003366;
+    width: 25%;
+    margin-top: 5%;
+}
+
+.overlay .btn:hover {
+    outline: none;
+    box-shadow: none;
+}
+
+.overlay .btn:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: #33ff55;
+    color: #003366;
+}
+
+.video-recorder {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+.video-recorder .header {
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    height: auto;
+    top: 50px;
+    background-size: cover;
+}
+
+.video-recorder h1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-transform: uppercase;
+    color: #003366;
+    font-weight: lighter;
+    text-align: center;
+    position: relative;
+}
+
+.video-recorder .row {
+    margin-top: 50px;
+}
+
+.video-recorder h4 {
+    margin-top: 20px;
+    color: #003366;
+    font-weight: lighter;
+}
+
+.video-recorder small {
+    margin-top: 20px;
+    color: #003366;
+    font-weight: lighter;
+}
+
+.container {
+    height: 100%;
+    overflow: auto;
+    margin-top: 50px;
+    background-color: rgb(245, 255, 245);
+}
+
+#answerVideo .fa {
+    float: right;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+#answerText .fa {
+    text-align: right;
+    padding-top: 20px;
+    font-size: 20px;
+    color: #33ff55;
+}
+
+#posts .card {
+    height: 150px;
+    color: #003366;
+    margin-top: 20px;
+    overflow: auto;
+}
+
+.icon-bar {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.icon-bar .fa {
+    color: #33ff55;
+    font-size: 20px;
+    padding: 20px;
+}
+
+#answerVideo {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#answerText {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+#answerText .card {
+    background-color: #003366;
+    height: auto;
+}
+
+#answerText .card-header {
+    color: #33ff55;
+    text-align: center;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+#answerText .form-control {
+    border: 1px solid #33ff55;
+    color: grey;
+    background-color: #003366;
+    height: 100px;
+}
+
+#answerText .btn {
+    outline: none;
+    box-shadow: none;
+    background-color: #33ff55;
+    color: #003366;
+    width: 25%;
+    margin-top: 5%;
+}
+
+#answerText .btn:hover {
+    outline: none;
+    box-shadow: none;
+}
+
+#answerText .btn:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: #33ff55;
+    color: #003366;
+}
+
+#preview {
+    width: 100%;
+    border: 1px solid #003366;
+}
+
+#display {
+    width: 100%;
+}
+
+.btn {
+    color: #003366;
+}
+
+.public {
+    display: none;
+    height: 100%;
+}
+
+.public .card {
+    height: auto;
+}
+
+.public .header {
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    height: auto;
+    top: 50px;
+    background-size: cover;
+}
+
+.public h1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-transform: uppercase;
+    color: #003366;
+    font-weight: lighter;
+    text-align: center;
+    position: relative;
+}
+
+.public .q {
+    color: #003366;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.public .ans {
+    color: #003366;
+    font-size: 20px;
+}

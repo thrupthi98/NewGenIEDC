@@ -1,0 +1,139 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="faq.css">
+
+    <script src="pace-master/pace.js"></script>
+    <link href="pace-master/themes/green/pace-theme-loading-bar.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <title>New-Gen IEDC</title>
+
+</head>
+
+<body onload="on()">
+    <div class="content">
+        <nav class="navbar navbar-expand-sm fixed-top">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span>^</span>
+        </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="about.html">About Us</a>
+                    <a class="nav-link" href="ipl.html">Innovative Projects</a>
+                    <a class="nav-link" href="faq.html">FAQs</a>
+                    <a class="nav-link" href="contact.html">Contact @</a>
+                </div>
+            </div>
+        </nav>
+
+        <center>
+            <div class="overlay" id="overlay">
+                <div class="card col-lg-4">
+                    <div class="card-header">Let's know who you are...</div>
+                    <div class="card-body">
+                        <input class="form-control" type="email" placeholder="Email address" id="email">
+                        <button class="btn" onclick="view()">View</button>
+                    </div>
+                </div>
+            </div>
+        </center>
+
+    </div>
+
+    <div class="video-recorder" id="video-recorder">
+        <div class="header col-lg-12">
+            <h1 class="col-lg-12">Stream of thought and queries</h1>
+        </div>
+
+        <div class="container" id="posts"></div>
+
+        <div id="answerVideo">
+            <div class="container col-lg-12">
+                <i class="fa fa-times" onclick="closeRecorder()"></i>
+                <center>
+                    <h4>Record your responces here</h4>
+                    <small>Use microphones for better sound quality</small>
+                    <div class="row">
+                        <div class="card col-lg-6">
+                            <div class="card-body">
+                                <video id="preview" autoplay muted></video>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-light" id="startButton">Start Recording</button>
+                                <button class="btn btn-light" id="stopButton">Stop Recording</button>
+                            </div>
+                        </div>
+                        <div class="card col-lg-6">
+                            <div class="card-body">
+                                <video id="display" controls></video>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-light" id="sendEmail" onclick="mailVideo()">Mail Response</button>
+                                <button class="btn btn-light" id="sendPost" onclick="postVideo()">Post Response</button>
+                            </div>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+
+        <!-- <center>
+            <div id="confirmSubmission">
+                <div class="card col-lg-4">
+                    <i class="fa fa-times" onclick="closeConfirmation()"></i>
+                    <div class="card-title">Do you wanna mail it personally or display your responses to all</div>
+                    <div class="card-body">
+                        <button class="btn">Mail it</button>
+                        <button class="btn">Post it</button>
+                    </div>
+                </div>
+            </div>
+        </center> -->
+
+        <div id="answerText">
+            <center>
+                <div class="card col-lg-8">
+                    <i class="fa fa-times" onclick="closeText()"></i>
+                    <div class="card-header">
+                        <span>Reply to your queries here</span><br>
+                    </div>
+                    <div class="card-body">
+                        <textarea class="form-control" id="responseText"></textarea>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" id="sendText" onclick="mailText()">Mail Response</button>
+                        <button class="btn" id="sendText" onclick="postText()">Post Response</button>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </div>
+
+    <div class="public " id="public">
+        <div class="header col-lg-12 ">
+            <h1 class="col-lg-12 ">We are here to help</h1>
+        </div>
+
+        <div class="container" id="Publicposts"></div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+    <script type="text/javascript" src="faq.js"></script>
+</body>
+
+</html>

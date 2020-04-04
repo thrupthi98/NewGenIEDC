@@ -1,0 +1,263 @@
+nav {
+    background-color: #33ff55;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-link {
+    color: #003366;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #003366;
+    text-decoration: none;
+    color: #003366;
+}
+
+.dropdown-menu {
+    background-color: #c2fdcc;
+}
+
+.dropdown-item {
+    color: #003366;
+    font-size: 15px;
+}
+
+.dropdown-item:hover {
+    background-color: #afffbc;
+    text-align: none;
+    color: #003366;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.map {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    left: 50%;
+}
+
+.card {
+    margin-top: 100px;
+    height: 550px;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+
+.card-title {
+    text-align: center;
+    color: #003366;
+}
+
+.card-text {
+    text-align: center;
+    color: #003366;
+}
+
+.fa {
+    color: #33ff55;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.fa-envelope,
+.fa-phone {
+    color: #003366;
+}
+
+img {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 60%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.post {
+    padding-top: 100px;
+    color: #003366;
+}
+
+h3 {
+    border-bottom: 5px solid #33ff55;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.form-control {
+    border: 1px solid #afffbc;
+    outline: none;
+    box-shadow: none;
+    border-left: 40px solid #33ff55;
+    width: 100%;
+}
+
+.form-control:hover {
+    outline: none;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #def697;
+    border-left: 40px solid #33ff55;
+}
+
+.btn {
+    outline: none;
+    box-shadow: none;
+    background-color: #33ff55;
+    color: #003366;
+    width: 30%;
+    margin-left: 40%;
+}
+
+.btn:hover {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: #33ff55;
+    color: #003366;
+}
+
+.overlay .card {
+    width: 300px;
+    height: 400px;
+    overflow: auto;
+}
+
+.overlay .fa {
+    color: grey;
+    font-size: 20px;
+    padding-right: 8px;
+    text-align: right;
+}
+
+.overlay .form-control {
+    border: none;
+    border-bottom: 1px solid #33ff55;
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 0;
+    color: grey;
+}
+
+.overlay .btn {
+    outline: none;
+    box-shadow: none;
+    background-color: #33ff55;
+    color: #003366;
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.overlay .btn:hover {
+    outline: none;
+    box-shadow: none;
+}
+
+.overlay .btn:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: #33ff55;
+    color: #003366;
+}
+
+.overlay small {
+    margin-left: 10%;
+    color: #003366;
+}
+
+.click {
+    color: #003366;
+    font-size: 13px;
+    background-color: white;
+    border: none;
+}
+
+.click:hover {
+    outline: none;
+    box-shadow: none;
+}
+
+.click:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: white;
+    color: #003366
+}
+
+.btn-google {
+    outline: none;
+    box-shadow: none;
+    background-color: red;
+    color: white;
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.btn-google:hover {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-google:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: red;
+    color: white;
+}
+
+.btn-fb {
+    outline: none;
+    box-shadow: none;
+    background-color: #003366;
+    color: white;
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.btn-fb:hover {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-fb:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: #003366;
+    color: white;
+}
+
+#overlay-signIn,
+#overlay-signUp {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}

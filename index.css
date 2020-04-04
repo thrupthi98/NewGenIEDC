@@ -1,0 +1,116 @@
+nav {
+    background-color: #33ff55;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-link {
+    color: #003366;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #003366;
+    text-decoration: none;
+    color: #003366;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.dropdown-menu {
+    background-color: #c2fdcc;
+}
+
+.dropdown-item {
+    color: #003366;
+    font-size: 15px;
+}
+
+.dropdown-item:hover {
+    background-color: #afffbc;
+    text-align: none;
+    color: #003366;
+}
+
+.intro {
+    height: 400px;
+    margin-top: 100px;
+}
+
+.ss {
+    height: 400px;
+    overflow: auto;
+    margin-top: 100px;
+}
+
+.home {
+    margin-top: 100px;
+    display: inline-block;
+}
+
+.mou {
+    margin-top: 100px;
+    height: 310px;
+    overflow: auto;
+}
+
+.mou h3 {
+    color: #003366;
+    border-bottom: 5px solid #33ff55;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.home .card-header {
+    text-align: center;
+    color: #003366;
+    background-color: #33ff55;
+    text-transform: uppercase;
+}
+
+.card-link:hover {
+    text-decoration: none;
+    color: #003366;
+}
+
+.home .card-body {
+    color: #003366;
+    height: 30%;
+}
+
+.card-group {
+    padding-top: 20px;
+}
+
+.card-group .card {
+    background-color: rgb(233, 255, 231);
+}
+
+.grants {
+    color: #003366;
+    border-bottom: 5px solid #33ff55;
+    width: 20%;
+    text-transform: uppercase;
+    padding-top: 50px;
+}
+
+.card-body h3 {
+    color: #003366;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+li.bullets {
+    list-style-image: url(images/notebook.png);
+    color: #003366;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.point {
+    color: #003366;
+    padding-left: 5%;
+}
