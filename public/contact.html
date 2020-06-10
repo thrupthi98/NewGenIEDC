@@ -66,6 +66,7 @@
                             <p id="empty_query"></p>
                             <button class="btn" id="post">Post</button>
                         </div>
+                        <button class="mentor-btn" id="mentor" onclick="openMentorForm()">Wanna apply as an mentor... Click here</button>
                     </div>
                 </div>
             </div>
@@ -104,6 +105,20 @@
                         <p id="invalid-repass"></p>
                         <button class="btn" id="signUp">Sign Up</button>
                         <small>Already a member?</small><button class="click" onclick="displaySignIn()">Click here</button><br><br>
+                    </div>
+                </div>
+            </div>
+        </center>
+
+        <center>
+            <div class="overlay" id="overlay-mentor">
+                <div class="card mentor-card">
+                    <i class="fa fa-times" onclick="closeMentorForm()"></i>
+                    <div class="form-group">
+                        <label>Topics for mentoring</label>
+                        <textarea class="form-control" id="topic" placeholder="Ex: Software Architecture, Drone Technology..."></textarea>
+                        <p id="error"></p>
+                        <button class="btn" id="formBtn">Submit</button>
                     </div>
                 </div>
             </div>

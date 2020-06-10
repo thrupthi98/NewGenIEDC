@@ -244,8 +244,24 @@ h3 {
 .btn-fb:focus {
     outline: none;
     box-shadow: none;
-    background-color: #003366;
-    color: white;
+}
+
+.mentor-btn {
+    outline: none;
+    box-shadow: none;
+    background-color: rgb(229, 198, 250);
+    color: #003366;
+    border: none;
+}
+
+.mentor-btn:hover {
+    outline: none;
+    box-shadow: none;
+}
+
+.mentor-btn:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 #overlay-signIn,
@@ -260,4 +276,57 @@ h3 {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
+}
+
+#overlay-mentor {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+@media screen and (min-width: 1024px) {
+    .mentor-card {
+        width: 50% !important;
+        height: 200px !important;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .mentor-card {
+        width: 90% !important;
+        height: 200px !important;
+    }
+}
+
+label {
+    text-align: left !important;
+}
+
+#overlay-mentor .btn {
+    outline: none;
+    box-shadow: none;
+    background-color: #33ff55;
+    color: #003366;
+    width: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#overlay-mentor .btn:hover {
+    outline: none;
+    box-shadow: none;
+}
+
+#overlay-mentor .btn:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: #33ff55;
+    color: #003366;
 }

@@ -35,8 +35,13 @@ nav {
 }
 
 .carousel-inner .card {
-    height: 500px;
+    height: auto;
     overflow: hidden;
+    height: 300px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    box-shadow: none;
 }
 
 .card-body h3 {
@@ -78,6 +83,7 @@ nav {
 .nav-tabs .nav-link {
     border: none;
     outline: none;
+    margin-left: 30px;
 }
 
 .nav-tabs .nav-link:focus {
@@ -98,8 +104,13 @@ nav {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.winners {
+    height: 600px;
+    overflow: auto;
+}
+
 .awards .card {
-    border: 6px solid #003366;
+    border: 3px solid #003366;
     margin-top: 20px;
     margin-right: 10px;
 }

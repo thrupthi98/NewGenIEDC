@@ -12,10 +12,12 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-var check, signInCheck, signUpCheck,
-    count = 0,
+var check, signInCheck, signUpCheck, mentorFormCheck, checkTopicEmpty
+count = 0,
     signUpCount = 0,
-    signInCount = 0;
+    signInCount = 0,
+    errorCnt = 0;
+var color1, color2;
 
 //---------------------------------------------------------------------------------
 
@@ -89,6 +91,8 @@ document.getElementById('repass').addEventListener("keyup", function(event) {
     }
 })
 
+//--------------------------------------------------------------------------------------
+
 document.getElementById("post").addEventListener("click", function() {
     check = setInterval(on, 500)
 })
@@ -102,6 +106,12 @@ document.getElementById("signIn").addEventListener("click", function() {
 document.getElementById("signUp").addEventListener("click", function() {
     if (document.getElementById("signUp").style.display !== "none") {
         signUpCheck = setInterval(signUp, 500)
+    }
+})
+
+document.getElementById("formBtn").addEventListener("click", function() {
+    if (document.getElementById("formBtn").style.display !== "none") {
+        mentorFormCheck = setInterval(submitMentorForm, 500)
     }
 })
 
@@ -124,7 +134,6 @@ function on() {
             if (firebase.auth().currentUser === null) {
                 displaySignIn();
             } else {
-                console.log("hello")
                 var uid = firebase.auth().currentUser.uid
                 var postId = firebase.database().ref('users/' + uid).child('queries').push().key
                 firebase.database().ref('users/' + uid).child('queries').child(postId).child('Q').set(query)
@@ -385,4 +394,80 @@ function signOut() {
     }).catch(function(error) {
         alert("Oops!! Sorry something went wrong")
     });
+}
+//----------------------------------------------------------------------------------
+
+var initial = setInterval(changeColor1, 500)
+
+function changeColor1() {
+    clearInterval(initial)
+    document.getElementById("mentor").style.backgroundColor = 'rgb(229, 198, 250)'
+    color1 = setInterval(changeColor2, 500)
+    clearInterval(color2)
+}
+
+function changeColor2() {
+    document.getElementById("mentor").style.backgroundColor = 'rgb(241, 199, 214)'
+    color2 = setInterval(changeColor1, 200)
+    clearInterval(color1)
+}
+
+function openMentorForm() {
+    if (firebase.auth().currentUser === null) {
+        displaySignIn();
+    } else {
+        document.getElementById("overlay-mentor").style.display = "block"
+    }
+}
+
+function submitMentorForm() {
+    var topic = document.getElementById("topic").value;
+    var error = document.getElementById("error")
+    if (topic.trim() === "") {
+        errorText = "please enter your username"
+        error.innerHTML = errorText;
+        error.style.color = "red"
+        document.getElementById("formBtn").style.display = "none"
+        errorCnt = errorCnt + 1
+    } else {
+        errorText = ""
+        error.innerHTML = errorText;
+
+        clearInterval(mentorFormCheck)
+        document.getElementById("formBtn").style.display = "block"
+
+        if (errorCnt == 0) {
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (user === null) {
+                    displaySignIn();
+                } else {
+                    var topic = document.getElementById("topic").value
+                    var uid = firebase.auth().currentUser.uid
+                    var postId = firebase.database().ref('users/' + uid).child('mentor').child('requests').push().key
+
+                    firebase.database().ref('users/' + uid).child('mentor').child('requests').child(postId).child('Q').set(topic).then(function() {
+                        alert("Your request has been filed")
+                        closeMentorForm();
+                    })
+                }
+            })
+        } else {
+            document.getElementById("formBtn").addEventListener("click", function() {
+                var topic = document.getElementById("topic").value
+                var uid = firebase.auth().currentUser.uid
+                var postId = firebase.database().ref('users/' + uid).child('mentor').child('requests').push().key
+
+                firebase.database().ref('users/' + uid).child('mentor').child('requests').child(postId).child('Q').set(topic).then(function() {
+                    alert("Your request has been filed")
+                    closeMentorForm();
+                })
+            })
+        }
+    }
+}
+
+function closeMentorForm() {
+    document.getElementById("overlay-mentor").style.display = "none"
+
+    document.getElementById("topic").value = ""
 }
