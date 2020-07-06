@@ -131,7 +131,7 @@ nav {
 }
 
 @media screen and (max-width: 1439px) {
-    .dropdown {
+    .menu {
         display: block;
         margin-top: 120px;
     }
@@ -176,7 +176,7 @@ nav {
         border: none;
         outline: none;
     }
-    .dropdown {
+    .menu {
         display: none;
     }
     .tab-content {

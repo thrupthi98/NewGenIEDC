@@ -119,6 +119,9 @@ hr {
         padding: 50px;
         height: 500px;
     }
+    .img {
+        height: 500px;
+    }
 }
 
 @media screen and (max-width: 1439px) {
