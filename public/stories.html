@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="stories.css">
 
     <script src="pace-master/pace.js"></script>
@@ -19,29 +20,39 @@
 <body>
     <div class="content">
         <nav class="navbar navbar-expand-sm fixed-top">
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span>^</span>
+            <button class="navbar-toggler">
+                <i class="fa fa-bars" aria-hidden="true" onclick="showSidebar()"></i>
             </button>
-
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav ml-auto">
-                    <a class="nav-link" href="index.html">Home</a>
-                    <a class="nav-link" href="about.html">About</a>
-                    <div class="dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About</a>
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                         Projects
                       </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="ipl.html">IPL Projects</a>
-                            <a class="dropdown-item" href="project.html#2017_18">2017-18 Projects</a>
-                            <a class="dropdown-item" href="project.html#2018_19">2019-20 Projects</a>
-                        </div>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="ipl.html">IPL Projects</a>
+                        <a class="dropdown-item" href="project.html#2017_18">2018-19 Projects</a>
+                        <a class="dropdown-item" href="project.html#2018_19">2019-20 Projects</a>
                     </div>
-                    <a class="nav-link" href="stories.html">Achievements</a>
-                    <a class="nav-link" href="contact.html">Contact Us</a>
                 </div>
+                <a class="nav-link" href="stories.html">Achievements</a>
+                <a class="nav-link" href="contact.html">Contact Us</a>
             </div>
         </nav>
+
+        <div id="overlay" onclick="off()">
+            <div class="sidebar">
+                <a class="nav-link" href="index.html"><i class="fa fa-home icon" aria-hidden="true"></i>Home</a>
+                <a class="nav-link" href="about.html"><i class="fa fa-user icon" aria-hidden="true"></i>About</a>
+                <a class="nav-link" href="ipl.html"><i class="fa fa-graduation-cap icon" aria-hidden="true"></i>IPL Projects</a>
+                <a class="nav-link" href="project.html#2017_18"><i class="fa fa-pencil icon" aria-hidden="true"></i>2018-19 Projects</a>
+                <a class="nav-link" href="project.html#2018_19"><i class="fa fa-pencil icon" aria-hidden="true"></i>2019-20 Projects</a>
+                <a class="nav-link" href="stories.html"><i class="fa fa-trophy icon" aria-hidden="true"></i>Achievements</a>
+                <a class="nav-link" href="contact.html"><i class="fa fa-phone icon" aria-hidden="true"></i>Contact Us</a>
+
+            </div>
+        </div>
 
         <div class="story-wrap">
             <h1>Our Success Stories</h1>
@@ -117,6 +128,16 @@
 
 
     </div>
+
+    <script>
+        function showSidebar() {
+            document.getElementById("overlay").style.display = "block"
+        }
+
+        function off() {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
 
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>

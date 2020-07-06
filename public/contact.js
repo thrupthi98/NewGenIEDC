@@ -242,11 +242,11 @@ function signIn() {
     }
 }
 
-function off() {
-    document.getElementById('overlay-signIn').style.display = "none";
-    document.getElementById('email').value = ""
-    document.getElementById('pass').value = ""
-}
+// function off() {
+//     document.getElementById('overlay-signIn').style.display = "none";
+//     document.getElementById('email').value = ""
+//     document.getElementById('pass').value = ""
+// }
 
 //----------------------------------------------------------------------------
 

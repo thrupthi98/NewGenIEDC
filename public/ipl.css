@@ -5,6 +5,52 @@ nav {
     box-shadow: 5px 4px 4px 0px rgba(15, 8, 49, 0.2);
 }
 
+@media screen and (min-width: 1024px) {
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .navbar-nav {
+        display: none;
+    }
+    .navbar-toggler {
+        display: block;
+    }
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.sidebar {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    position: absolute;
+    background-color: white;
+    box-shadow: 5px 4px 4px 0px rgba(15, 8, 49, 0.2);
+    height: 100%;
+    width: 230px;
+    overflow-y: scroll;
+}
+
+.icon {
+    margin-right: 20px !important;
+    color: #d3d3d4 !important;
+    font-size: 20px;
+}
+
 .nav-link {
     color: #003366;
     margin-top: 40px;
@@ -17,6 +63,11 @@ nav {
     color: #003366;
     margin-top: 40px;
     font-size: 16px;
+}
+
+.fa-bars {
+    color: black !important;
+    font-size: 20px !important;
 }
 
 .navbar-toggler:focus {
@@ -58,16 +109,20 @@ nav {
 }
 
 .btn {
-    color: #003366;
-    padding-top: 40px;
-    font-weight: bold;
+    background-color: #003366;
+    color: white;
+    padding: 5px;
     outline-style: none;
+    border-radius: 5px;
+    margin-left: 40px;
 }
 
 .btn:hover {
-    border-bottom: 5px solid #33ff55;
-    text-decoration: none;
+    background-color: #e8eef3;
     color: #003366;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 40px;
 }
 
 .btn:focus {
@@ -75,53 +130,82 @@ nav {
     box-shadow: none;
 }
 
-.nav-tabs {
-    margin-top: 100px;
-    border: none;
-    outline: none;
+@media screen and (max-width: 1439px) {
+    .dropdown {
+        display: block;
+        margin-top: 120px;
+    }
+    .nav-tabs {
+        display: none
+    }
+    .tab-content {
+        margin-top: 20px;
+        border-left: none;
+    }
+    .row {
+        margin: 0 !important;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .aboutIPL {
+        font-size: 15px;
+        color: rgb(163, 162, 162);
+        line-height: 200%;
+        margin-top: 40px;
+    }
+    .winners {
+        margin-top: 40px;
+        height: 350px;
+        overflow: scroll;
+        background-color: #e8eef3;
+    }
 }
 
-.nav-tabs .nav-link {
-    border: none;
-    outline: none;
-    margin-left: 30px;
-    background-color: #003366;
-    color: white;
-    border-radius: 20px;
-    width: 260px;
+@media screen and (min-width: 1440px) {
+    .nav-tabs .nav-link {
+        border: none;
+        outline: none;
+        margin: 10px;
+        background-color: #003366;
+        color: white;
+        border-radius: 20px;
+        width: 160px;
+    }
+    .nav-tabs {
+        margin-top: 150px;
+        border: none;
+        outline: none;
+    }
+    .dropdown {
+        display: none;
+    }
+    .tab-content {
+        margin-top: 130px;
+        border-left: none;
+    }
+    .row {
+        margin: 0 !important;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .aboutIPL {
+        font-size: 15px;
+        color: rgb(163, 162, 162);
+        line-height: 200%;
+        padding: 80px;
+    }
+    .winners {
+        margin-top: 80px;
+        height: 350px;
+        overflow: scroll;
+        background-color: #e8eef3;
+    }
 }
 
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:active {
     color: #003366;
     border: 2px solid #003366;
-}
-
-.tab-content {
-    margin-top: 130px;
-    border-left: none;
-}
-
-.row {
-    margin: 0 !important;
-}
-
-.col-sm-7 {
-    margin-top: 20px;
-}
-
-.aboutIPL {
-    font-size: 15px;
-    color: rgb(163, 162, 162);
-    margin-top: 40px;
-    line-height: 200%;
-    margin-bottom: 50px;
-}
-
-.winners {
-    height: 650px;
-    overflow: auto;
-    background-color: #003366;
 }
 
 .awards .card {
