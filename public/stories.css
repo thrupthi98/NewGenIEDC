@@ -35,28 +35,13 @@ nav {
     font-family: 'Arial narrow';
 }
 
-.about-wrap {
+.story-wrap {
     margin-top: 100px;
     margin-bottom: 50px;
 }
 
-.about {
-    width: 100%;
-    height: 400px;
-    opacity: 0.3;
-}
-
 .iedc {
     padding-top: 100px;
-}
-
-.text {
-    margin-top: 80px;
-    background-color: #f5f5f6;
-}
-
-.text .container {
-    padding: 90px;
 }
 
 h1 {
@@ -65,15 +50,11 @@ h1 {
     color: #003366;
     font-weight: bold;
     padding-bottom: 40px;
-}
-
-hr {
-    width: 50px;
-    border: 1.5px solid #33ff55;
+    padding-top: 40px;
 }
 
 h5 {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
 p {
@@ -81,11 +62,35 @@ p {
     color: rgb(163, 162, 162);
     line-height: 160%;
     margin-bottom: 0;
-    text-align: center;
 }
 
 .row {
     margin: 0 !important;
+}
+
+@media screen and (min-width:1024px) {
+    .news {
+        padding: 30px;
+    }
+    .cover {
+        padding: 40px;
+        background-color: #f5f5f6;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .news img {
+        width: 100%;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    .news img {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 40px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -102,9 +107,7 @@ p {
         height: 250px;
         box-shadow: 10px 11px 46px 0px rgba(15, 8, 49, 0.2);
     }
-}
-
-.context {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    .context {
+        padding-top: 40px;
+    }
 }
