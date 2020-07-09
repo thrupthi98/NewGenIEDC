@@ -16,7 +16,7 @@ nav {
         display: none;
     }
     .navbar-toggler {
-        display: block;
+        display: block !important;
     }
 }
 
@@ -80,10 +80,38 @@ nav {
     border: none !important;
 }
 
+@media screen and (min-width:991px) and (max-width:1439px) {
+    .menu .dropdown-menu {
+        margin-top: 80px;
+    }
+}
+
 .dropdown-item {
     font-size: 16px;
     color: rgb(163, 162, 162);
     font-family: 'Arial narrow';
+}
+
+.context {
+    margin-top: 80px;
+    background-color: #f5f5f6;
+    padding: 90px;
+}
+
+.context h1 {
+    text-align: center;
+    font-family: 'Arial Narrow';
+    color: #003366;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+
+.context p {
+    font-size: 15px;
+    color: rgb(163, 162, 162);
+    line-height: 160%;
+    margin-bottom: 0;
+    text-align: center;
 }
 
 .carousel-inner .card {
@@ -94,6 +122,11 @@ nav {
     border: none;
     outline: none;
     box-shadow: none;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    display: none !important;
 }
 
 .card-body h3 {
@@ -133,13 +166,15 @@ nav {
 @media screen and (max-width: 1439px) {
     .menu {
         display: block;
-        margin-top: 120px;
+        margin-top: 10px;
+        float: right;
+        margin-right: 20px;
     }
     .nav-tabs {
         display: none
     }
     .tab-content {
-        margin-top: 20px;
+        margin-top: 100px;
         border-left: none;
     }
     .row {
@@ -149,15 +184,23 @@ nav {
     }
     .aboutIPL {
         font-size: 15px;
-        color: rgb(163, 162, 162);
+        color: rgb(80, 79, 79);
         line-height: 200%;
         margin-top: 40px;
+        text-align: justify;
     }
     .winners {
         margin-top: 40px;
         height: 350px;
         overflow: scroll;
         background-color: #e8eef3;
+    }
+}
+
+@media screen and (min-width: 474px) and (max-width: 993px) {
+    img {
+        width: 300px;
+        height: 300px;
     }
 }
 
@@ -169,10 +212,10 @@ nav {
         background-color: #003366;
         color: white;
         border-radius: 20px;
-        width: 160px;
+        width: 140px;
     }
     .nav-tabs {
-        margin-top: 150px;
+        margin-top: 30px;
         border: none;
         outline: none;
     }
@@ -180,7 +223,7 @@ nav {
         display: none;
     }
     .tab-content {
-        margin-top: 130px;
+        margin-top: 40px;
         border-left: none;
     }
     .row {
@@ -190,9 +233,12 @@ nav {
     }
     .aboutIPL {
         font-size: 15px;
-        color: rgb(163, 162, 162);
+        color: rgb(80, 79, 79);
         line-height: 200%;
-        padding: 80px;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 30px;
+        text-align: justify !important;
     }
     .winners {
         margin-top: 80px;

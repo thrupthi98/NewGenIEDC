@@ -16,7 +16,7 @@ nav {
         display: none;
     }
     .navbar-toggler {
-        display: block;
+        display: block !important;
     }
 }
 

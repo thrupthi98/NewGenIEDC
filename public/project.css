@@ -16,7 +16,7 @@ nav {
         display: none;
     }
     .navbar-toggler {
-        display: block;
+        display: block !important;
     }
 }
 
@@ -113,7 +113,7 @@ hr {
     margin-right: 5%;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 700px) and (max-width: 922px) {
     .text {
         background-color: #003366;
         padding: 50px;
@@ -124,11 +124,24 @@ hr {
     }
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (min-width: 923px) and (max-width: 1250px) {
     .text {
         background-color: #003366;
-        padding: 50px;
+        padding: 20px;
+        height: 400px;
     }
+    .about {
+        height: 50px;
+        overflow: auto;
+    }
+    .img {
+        height: 400px;
+    }
+}
+
+.text {
+    background-color: #003366;
+    padding: 50px;
 }
 
 .text h5 {
