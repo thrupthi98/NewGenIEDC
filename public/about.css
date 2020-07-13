@@ -137,6 +137,10 @@ p {
     text-align: center;
 }
 
+.program .para {
+    margin-top: 50px;
+}
+
 b {
     font-size: 17px;
 }
@@ -182,7 +186,6 @@ b {
     color: #003366;
     font-weight: bold;
     padding-bottom: 40px;
-    padding-top: 40px;
 }
 
 .program p {
@@ -191,4 +194,42 @@ b {
     line-height: 160%;
     margin-bottom: 20px;
     text-align: justify;
+}
+
+.outer-card {
+    text-align: center;
+}
+
+.card {
+    outline: none;
+    border: none;
+    box-shadow: 10px 11px 46px 0px rgba(15, 8, 49, 0.2);
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.card p {
+    font-size: 15px;
+    color: rgb(65, 64, 64);
+    line-height: 160%;
+    text-align: left;
+}
+
+@media screen and (min-width: 992px) {
+    .card .para {
+        padding: 40px;
+        height: 230px;
+    }
+    .card img {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .card .para {
+        padding: 40px;
+    }
+    .card img {
+        display: none;
+    }
 }
